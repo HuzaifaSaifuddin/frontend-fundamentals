@@ -1,0 +1,275 @@
+<!--
+  FRONTEND FUNDAMENTALS
+  HomeWork Assignment 4
+  STUDENT : Huzaifa Pitolwala
+
+  EXTRA CREDITS
+
+  USED MEDIA QUERIES
+  - Using one media rule, target all browsers smaller than 400px
+  - Using another media rule, target all browsers between 401px and 750px;
+  - Using another media rule, target all browsers larger than 750px.
+  - USED FONT SIZE, COLOR, DISPLAY (using nth-child), ETC with change in size
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipe Time</title>
+    <!-- https://www.w3schools.com/css/default.asp -->
+    <style type="text/css">
+      body {
+        color: #fff;
+      }
+
+      .recipe-header {
+        text-align: center;
+        border-bottom: 1px solid #fff;
+      }
+
+      .recipe-name {
+        text-decoration: underline;
+        font-size: bold;
+        color: yellow;
+      }
+
+      .my-story > p > span {
+        font-style: italic;
+      }
+
+      .winky-tongue-smiley {
+        font-size: 18px;
+      }
+
+      .recipe-title {
+        color: yellow;
+        text-transform: uppercase;
+      }
+
+      .lemonade-text {
+        font-size: 18px;
+        text-transform: uppercase;
+      }
+
+      .ingredients-list li:before {
+        content: '👉';
+        margin-left: -20px;
+        margin-right: 10px;
+      }
+
+      .steps-list, .recipe-links {
+        list-style-type: lower-roman;
+      }
+
+      #other-links {
+        text-align: center;
+        border-top: 1px solid #fff;
+        margin-bottom: 40px;
+      }
+
+      #other-links a {
+        color: chartreuse;
+      }
+
+      #other-links a:hover {
+        color: yellow;
+      }
+
+      #other-links .recipe-links {
+        display: inline-flex;
+        list-style-type: none;
+      }
+
+      footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: darkgreen;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid #fff;
+      }
+
+      @media only screen and (min-width: 751px) {
+        body {
+          background-color: darkgreen;
+        }
+
+        .lemonade-text {
+          color: yellow;
+        }
+
+        #lemonade-recipe {
+          display: inline-flex;
+          width: 100%;
+          height: 300px;
+        }
+
+        #lemonade-recipe > div {
+          width: 33.33%;
+          padding: 20px;
+        }
+
+        #lemonade-image {
+          text-align: center;
+        }
+
+        .lemonade-image {
+          height: 75%;
+        }
+
+        footer {
+          background-color: darkgreen;
+        }
+      }
+
+      @media only screen and (min-width: 401px) and (max-width: 750px) {
+        body {
+          background-color: orange;
+        }
+
+        .lemonade-text {
+          color: darkgreen;
+        }
+
+        #lemonade-recipe {
+          width: 100%;          
+        }
+
+        #lemonade-recipe > div {
+          padding: 20px;
+        }
+
+        #lemonade-image {
+          text-align: left;
+        }
+
+        .lemonade-image {
+          height: 150px;
+        }
+
+        footer {
+          background-color: darkgreen;
+        }
+      }
+
+      @media only screen and (max-width: 400px) {
+        body {
+          background-color: grey;
+        }
+
+        .lemonade-text {
+          color: darkgreen;
+        }
+
+        .recipe-title {
+          font-size: 24px;
+        }
+
+        .ingredients-list, .steps-list {
+          font-size: 20px;
+        }
+
+        #lemonade-recipe {
+          width: 100%;          
+        }
+
+        #lemonade-recipe > div {
+          padding: 20px;
+        }
+
+        #lemonade-image {
+          text-align: left;
+        }
+
+        .lemonade-image {
+          height: 150px;
+        }
+
+        #other-links .recipe-links {
+          display: inline;
+        }
+
+        .recipe-links li:nth-child(2), li:last-child {
+          display: none;
+        }
+
+        footer {
+          background-color: black;
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+    <!-- Intro -->
+    <div class="recipe-header">
+      <!-- Name & Description -->
+      <h1 class="recipe-name">Lemonade</h1>
+      <h4 class="recipe-description"><em>A cool refreshing Lemon Juice.</em></h4>
+
+      <section class="my-story">
+        <!-- Why i love it -->
+        <p>Tired from a <span>energetic sporting event</span> like playing <span>cricket, badminton or gyming</span>. A sip to the bottom of <span class="lemonade-text">Lemonade</span>, makes me feel so refreshed & i feel a little less tired and more refreshed.
+        Having a good <span>alcoholic</span> session with friends later in the night. <span class="lemonade-text">Lemonade</span> again comes in handy to reduce hangover.<span class="winky-tongue-smiley">😜</span></p>
+      </section>
+    </div>
+
+    <!-- Recipe -->
+    <section id="lemonade-recipe">
+      <!-- Ingredients -->
+      <div id="lemonade-ingredients">
+        <p class="recipe-title"><b>Ingredients</b></p>
+        <ul class="ingredients-list">
+          <li>2 Lemons.</li>
+          <li>1 Glass of Water.</li>
+          <li>
+            A Teaspoon of :
+            <ul>
+              <li>Sugar</li>
+              <li>Honey</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Steps -->
+      <div id="lemonade-steps">
+        <p class="recipe-title"><b>Step</b></p>
+        <!-- Follow Steps in Order -->
+        <ol class="steps-list">
+          <li>Take A Glass Of Water(🚰). </li>
+          <li>Add a Teaspoon Sugar &/or Honey(🍯).</li>
+          <li>Squeeze A Lemon(🍋).</li>
+          <li>Mix Accordingly & Enjoy(😋).</li>
+        </ol>
+      </div>
+
+      <!-- Image -->
+      <div id="lemonade-image">
+        <p class="recipe-title"><b>FINAL PRODUCT</b></p>
+        <!-- Lemonade Image -->
+        <img src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2Farchive%2Fbcbceed90d40c95acd29cf8295f6fda017ba9887", alt="A glass of Lemonade" class="lemonade-image" />
+      </div>
+
+      
+    </section>
+
+    <div id="other-links">
+      <!-- Other Links -->
+      <h3>I always prefer Sweet & Simple <span class="lemonade-text">Lemonade</span>. But here are some cool different ways of making <span class="lemonade-text">Lemonade</span>. Click on the links below to check it out.</h3>
+      <ol class="recipe-links">
+        <li><a href="https://www.deliciousmeetshealthy.com/homemade-lemonade-recipe/" target="_blank">Recipe by NELI on DELICIOUS MEETS HEALTHY</a></li>
+        <li><a href="http://add-food.herokuapp.com/recipes/show/1" target="_blank">Recipe by HUZAIFA on ADD FOOD</a></li>
+        <li><a href="https://www.allrecipes.com/recipe/32385/best-lemonade-ever/" target="_blank">Recipe by JO on ALL RECIPES</a></li>
+        <li><a href="https://www.thekitchn.com/lemonade-from-scratch-258369" target="_blank">Recipe by MEGHAN SPLAWN on THEKITCHN</a></li>
+        <li><a href="https://www.simplyrecipes.com/recipes/perfect_lemonade/" target="_blank">Recipe by ELISE BAUER on SIMPLY RECIPES</a></li>
+      </ol>
+    </div>
+
+    <footer>
+      ARTICLE & RECIPE BY : HUZAIFA PITOLWALA
+    </footer>
+  </body>
+</html>

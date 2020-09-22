@@ -1,0 +1,134 @@
+<!--
+  FRONTEND FUNDAMENTALS
+  HomeWork Assignment 4
+  STUDENT : Huzaifa Pitolwala
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Recipe Time</title>
+    <!-- https://www.w3schools.com/css/default.asp -->
+    <style type="text/css">
+      body {
+        background-color: black;
+        color: white;
+      }
+
+      .recipe-title {
+        color: yellow;
+      }
+
+
+
+      #other-links a {
+        color: yellow;
+      }
+
+      .recipe-name {
+        text-decoration: underline;
+        font-size: bold;
+        text-align: center;
+        color: yellow;
+      }
+
+      .lemonade-image {
+        height: 300px;
+      }
+
+      .ingredients-list li:before {
+        content: '\1F918';
+        margin-left: -20px;
+        margin-right: 10px;
+      }
+
+      .steps-list, .recipe-links {
+        list-style-type: upper-roman;
+      }
+
+
+      /* EXTRA CREDITS 2 - Within your CSS create a selector that will only apply to <span> elements that are within <p> elements, and make them italic. */
+      .my-story > p > span {
+        font-style: italic;
+      }
+
+      /* EXTRA CREDITS 3 - Within your CSS create a selector that will only apply the last <span> within a <p> tag, and make it underlined. */
+      .my-story > p > span:last-child {
+        text-decoration: underline;
+      }
+
+      /* EXTRA CREDITS 4 - Give the first <span> element within the <p> tag a special class. Now add CSS that will remove the italics and apply a red color instead. */
+      .my-story > p > .red-normal {
+        font-style: normal;
+        color: red;
+      }
+    </style>
+
+  </head>
+  <body>
+    <header>
+      <!-- Name & Description -->
+      <h1 class="recipe-name">LEMONADE</h1>
+      <h4 class="recipe-description"><em>A cool refreshing Lemon Juice.</em></h4>
+    </header>
+
+    <section class="my-story">
+      <!-- Why i love it -->
+      <!-- EXTRA CREDITS 1 - Within one of your paragraphs, add <span> elements around several words or phrases that should be emphasized. -->
+      <p>Tired from a <span class="red-normal">energetic sporting event</span> like playing <span>cricket, badminton or gyming</span>. A sip to the bottom of <span>LEMONADE</span>, makes me feel so refreshed & i feel a little less tired and more refreshed.
+      Having a good <span>alcoholic</span> session with friends later in the night. <span>LEMONADE</span> again comes in handy to reduce hangover.😜</p>
+    </section>
+
+    <!-- Ingredients -->
+    <section id="recipe">
+      <div id="ingredients">
+        <p class="recipe-title"><b>INGREDIENTS</b></p>
+        <ul class="ingredients-list">
+          <li>2 Lemons.</li>
+          <li>1 Glass of Water.</li>
+          <li>
+            A Teaspoon of :
+            <ul>
+              <li>Sugar</li>
+              <li>Honey</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div id="steps">
+        <!-- Steps -->
+        <p class="recipe-title"><b>STEPS</b></p>
+        <!-- Follow Steps in Order -->
+        <ol class="steps-list">
+          <li>Take A Glass Of Water(🚰). </li>
+          <li>Add a Teaspoon Sugar &/or Honey(🍯).</li>
+          <li>Squeeze A Lemon(🍋).</li>
+          <li>Mix Accordingly & Enjoy(😋).</li>
+        </ol>
+      </div>
+
+      <div class="hows-it">
+        <!-- Look, Smell & Taste -->
+        <p>I prefer a <span>sweet lemonade</span>. <span>Tastes Sweet, Smell Lemony & looks refreshing 😉</span>.</p>
+
+        <!-- Lemonade Image -->
+        <img src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2Farchive%2Fbcbceed90d40c95acd29cf8295f6fda017ba9887", alt="A glass of Lemonade" class="lemonade-image" />
+        <h5 class="image-sub-text">A glass of Lemonade.</h5>
+      </div>
+    </section>
+
+    <footer>
+      <div id="other-links">
+        <!-- Other Links -->
+        <h3>Here are some more recipes to make Lemonade. Click on the links below to check it out.</h3>
+        <ol class="recipe-links">
+          <li><a href="https://www.deliciousmeetshealthy.com/homemade-lemonade-recipe/">Reipe by NELI on DELICIOUS MEETS HEALTHY</a></li>
+          <li><a href="http://add-food.herokuapp.com/recipes/show/1">Recipe by HUZAIFA on ADD FOOD</a></li>
+          <li><a href="https://www.allrecipes.com/recipe/32385/best-lemonade-ever/">Recipe by JO on ALL RECIPES</a></li>
+          <li><a href="https://www.thekitchn.com/lemonade-from-scratch-258369">Recipe by MEGHAN SPLAWN on THEKITCHN</a></li>
+          <li><a href="https://www.simplyrecipes.com/recipes/perfect_lemonade/">Recipe by ELISE BAUER on SIMPLY RECIPES</a></li>
+        </ol>
+      </div>
+    </footer>
+  </body>
+</html>
